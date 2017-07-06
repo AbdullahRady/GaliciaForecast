@@ -1,0 +1,63 @@
+body
+{
+	background-color: #f1f1f1;
+	
+}
+
+.container
+{
+    height: 100%;
+	text-align: center;
+}
+
+.navbar 
+{
+	margin-bottom: 0;
+	border-radius: 0;
+}
+
+.row.content 
+{
+	height: 100%;
+}
+
+.sidenav 
+{
+	padding-top: 20px;
+	height: 100%;
+}
+
+.sidenav 
+{
+	height: 100%;
+	padding: 15px;
+}
+
+.row.content 
+{
+	height:100%;
+}
+
+footer 
+{
+	color: #f1f1f1;
+	padding: 15px;
+	font-size: small;
+}
+
+.main
+{
+	background-color: #099;
+	color: #fff;
+}
+
+.light
+{
+	background-color: #099;
+	color: #fff;
+}
+
+.card
+{
+	text-align: center;
+}
