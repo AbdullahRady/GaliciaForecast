@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html data-ng-app="weatherApp" data-ng-controller="weatherCtrl">
 
@@ -122,3 +123,129 @@
 </html>
 
 
+=======
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html data-ng-app="weatherApp" data-ng-controller="weatherCtrl">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+        
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/controller.js"></script>
+       
+        
+        <title>{{pageData.title}}</title>
+        
+    </head>
+    
+    <body>
+
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+              <a class="navbar-brand" href="#">Forecaster</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-off"></span> Login</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+          
+        <div class="container">    
+          <div class="row content">
+            
+            <div class="col-sm-8 text-left"> 
+				<h2>{{pageData.mainHeading}}</h2>
+				<p>{{pageData.subHeading}}</p>
+
+                <div class="btn-group" data-ng-init="weatherForecast('Santiago de Compostela')">
+                    <button type="button" class="btn main" data-ng-click="weatherForecast('Santiago de Compostela')">Santiago de Compostela</button>
+                    <button type="button" class="btn main" data-ng-click="weatherForecast('Vigo')">Vigo</button>
+                    <button type="button" class="btn main" data-ng-click="weatherForecast('A Coruna')">A Coruna</button>
+                    <button type="button" class="btn main" data-ng-click="weatherForecast('Ourense')">Ourense</button>
+                    <button type="button" class="btn main" data-ng-click="weatherForecast('Pontevedra')">Pontevedra</button>
+                </div>
+                
+                <hr/>
+                
+                <div class="col-sm-12 light">
+                    <h3>{{city}}</h3>
+                    
+
+                    <ul class="list-group card">
+						<li style="list-style: none"><img data-ng-src="{{forecast[0].icon}}" height="55px" /></li>
+                        <li style="list-style: none"><h3>{{temp}}°C</h3></li>
+                        <li style="list-style: none"><h4>{{forecast[0].description}}</h4></li>
+                        <li style="list-style: none">{{forecast[0].max}}°C / {{forecast[0].min}}°C</li>
+                        <li style="list-style: none">Pressure: {{forecast[0].pressure}} hpa</li>
+                        <li style="list-style: none">Humidity: {{forecast[0].humidity}}%</li>
+                    </ul>                     
+                </div>
+                
+                <span>&nbsp;</span>
+                
+				<div class="row">
+               
+					<div class="col-sm-4">                    
+						<ul class="list-group card">
+							<li class="list-group-item main">{{forecast[1].date}}</li>
+							<li class="list-group-item"><img data-ng-src="{{forecast[1].icon}}" /></li>
+							<li class="list-group-item">{{forecast[1].max}}°C / {{forecast[1].min}}°C</li>
+							<li class="list-group-item">Pressure: {{forecast[1].pressure}} hpa</li>
+							<li class="list-group-item">Humidity: {{forecast[1].humidity}}%</li>
+                        </ul>
+					</div>
+					<div class="col-sm-4">
+						<ul class="list-group card">
+							<li class="list-group-item main">{{forecast[2].date}}</li>
+							<li class="list-group-item"><img data-ng-src="{{forecast[2].icon}}" /></li>
+							<li class="list-group-item">{{forecast[2].max}}°C / {{forecast[2].min}}°C</li>
+							<li class="list-group-item">Pressure: {{forecast[2].pressure}} hpa</li>
+							<li class="list-group-item">Humidity: {{forecast[2].humidity}}%</li>
+                        </ul>
+					</div>
+                    <div class="col-sm-4">
+						<ul class="list-group card">
+							<li class="list-group-item main">{{forecast[3].date}}</li>
+							<li class="list-group-item"><img data-ng-src="{{forecast[3].icon}}" /></li>
+							<li class="list-group-item">{{forecast[3].max}}°C / {{forecast[3].min}}°C</li>
+							<li class="list-group-item">Pressure: {{forecast[3].pressure}} hpa</li>
+							<li class="list-group-item">Humidity: {{forecast[3].humidity}}%</li>
+                        </ul>
+					</div>
+                </div>            
+                              
+            </div>
+            
+          </div>
+        </div>
+        
+        <footer>
+            
+        </footer>
+        
+    </body>
+    
+</html>
+
+
+>>>>>>> cd4a38302c08dfb7fc4d2135ee3f8592fc850e11
